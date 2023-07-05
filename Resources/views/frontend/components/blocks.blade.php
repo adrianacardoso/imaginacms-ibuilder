@@ -7,6 +7,9 @@
        $attributes['gallery'] = $blockConfig->mediaFiles->customgallery ?? null;
     }
     $block = $blockConfig->attributes->mainblock;
+    if(!empty($attributes['titleComponentAttributes'])) {
+       $attributes['titleComponentAttributes'] += [ 'id' => $block->id ?? $id ];
+    }
 @endphp
 <section id="block{{$block->id ?? $id}}"
          class="{{$block->blockClasses ?? $blockClasses}}"

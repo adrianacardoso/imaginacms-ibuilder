@@ -663,5 +663,369 @@ return [
         ]
       ],
     ]
-  ]
+  ],
+  "title" => [
+    "title" => "Titulos",
+    "systemName" => "ibuilder::title",
+    "nameSpace" => "Modules\Ibuilder\View\Components\Title",
+    "internal" => true,
+    "attributes" => [
+        "general" => [
+            "title" => "General",
+            "fields" => [
+                "textClasses" => [
+                    "name" => "textClasses",
+                    "columns" => "col-md-12",
+                    "type" => "input",
+                    "props" => [
+                        "label" => "Clase General de los textos"
+                    ]
+                ],
+                "textPosition" => [
+                    "name" => "textPosition",
+                    "value" => "2",
+                    "columns" => "col-12",
+                    "type" => "select",
+                    "props" => [
+                        "label" => "Posición de los textos",
+                        "options" => [
+                            ["label" => "Solo título", "value" => "1"],
+                            ["label" => "Solo Subtítulo", "value" => "4"],
+                            ["label" => "Título con descripción abajo", "value" => "2"],
+                            ["label" => "Título abajo con descripción arriba", "value" => "3"],
+
+                        ]
+                    ]
+                ],
+                "textAlign" => [
+                    "name" => "textAlign",
+                    "columns" => "col-12",
+                    "type" => "select",
+                    "props" => [
+                        "label" => "Alineación",
+                        "options" => $vAttributes["align"]
+                    ]
+                ],
+                "textVineta" => [
+                    "name" => "textVineta",
+                    "type" => "input",
+                    "props" => [
+                        "label" => "Icono"
+                    ]
+                ],
+                "textVinetaColorClass" => [
+                    "name" => "textVinetaColorClass",
+                    "type" => "select",
+                    "props" => [
+                        "label" => "Color icon (Clases)",
+                        "options" => $vAttributes["textColors"]
+                    ]
+                ],
+                "textVinetaColor" => [
+                    "name" => "textVinetaColor",
+                    "type" => "inputColor",
+                    "props" => [
+                        "label" => "Color icon",
+                    ],
+                    "help" => [
+                        "description" => "Selecciona el color custom en Color icon Class para activarlo",
+                    ]
+                ],
+                "textVinetaPosition" => [
+                    "name" => "textVinetaPosition",
+                    "value" => "1",
+                    "type" => "select",
+                    "props" => [
+                        "label" => "Posición del icono",
+                        "options" => [
+                            ["label" => "Sobre el titulo", "value" => "1"],
+                            ["label" => "Debajo del titulo", "value" => "2"],
+                            ["label" => "Al lado derecho del titulo", "value" => "3"],
+                            ["label" => "Al lado izquierdo del titulo", "value" => "4"],
+                            ["label" => "Sobre del subtitulo", "value" => "5"],
+                            ["label" => "Debajo del subtitulo", "value" => "6"],
+                        ]
+                    ]
+                ],
+                "textWithLine" => [
+                    "name" => "textWithLine",
+                    "value" => "0",
+                    "type" => "select",
+                    "props" => [
+                        "label" => "Linea",
+                        "options" => $vAttributes["titleLine"]
+                    ]
+                ],
+                "textLineConfig" => [
+                    "name" => "textLineConfig",
+                    "value" => ['background' => 'var(--primary)','height' => '2px','width' => '10%','margin' => '0 auto'],
+                    "type" => "json",
+                    "columns" => "col-12",
+                    "props" => [
+                        "label" => "Configuración de Línea",
+                    ]
+                ],
+            ],
+        ],
+        "title" => [
+          "title" => "Titulo",
+          "fields" => [
+              "titleClasses" => [
+                  "name" => "titleClasses",
+                  "type" => "input",
+                  "columns" => "col-12",
+                  "props" => [
+                      "label" => "Clases",
+                  ]
+              ],
+              "titleSize" => [
+                  "name" => "titleSize",
+                  "type" => "input",
+                  "props" => [
+                      "label" => "Tamaño Fuente",
+                  ]
+              ],
+              "titleMarginT" => [
+                  "name" => "titleMarginT",
+                  "type" => "select",
+                  "props" => [
+                      "label" => "Margen superior",
+                      "options" => $vAttributes["marginT"]
+                  ]
+              ],
+              "titleMarginB" => [
+                  "name" => "titleMarginB",
+                  "type" => "select",
+                  "props" => [
+                      "label" => "Margen inferior",
+                      "options" => $vAttributes["marginB"]
+                  ]
+              ],
+              "titleTransform" => [
+                  "name" => "titleTransform",
+                  "type" => "select",
+                  "props" => [
+                      "label" => "Transformar",
+                      "options" => $vAttributes["textTransform"]
+                  ]
+              ],
+              "titleColorClass" => [
+                  "name" => "titleColorClass",
+                  "type" => "select",
+                  "props" => [
+                      "label" => "Color Class",
+                      "options" => $vAttributes["textColors"]
+                  ],
+              ],
+              "titleColor" => [
+                  "name" => "titleColor",
+                  "type" => "inputColor",
+                  "props" => [
+                      "label" => "Color",
+                  ],
+                  "help" => [
+                      "description" => "Selecciona el color custom en Color Class para activarlo",
+                  ]
+              ],
+              "titleWeight" => [
+                  "name" => "titleWeight",
+                  "type" => "select",
+                  "props" => [
+                      "label" => "Negrita",
+                      "options" => $vAttributes["textWeight"]
+                  ]
+              ],
+              "titleLetterSpacing" => [
+                  "name" => "titleLetterSpacing",
+                  "type" => "input",
+                  "props" => [
+                      "label" => "Espacio entre letras",
+                      "type" => "number"
+                  ]
+              ],
+              "titleShadow" => [
+                  "name" => "titleShadow",
+                  "type" => "input",
+                  "props" => [
+                      "label" => "Sombra",
+                  ]
+              ],
+              "titleUrl" => [
+                  "name" => "titleUrl",
+                  "type" => "input",
+                  "props" => [
+                      "label" => "Url"
+                  ]
+              ],
+              "titleTarget" => [
+                  "name" => "titleTarget",
+                  "type" => "select",
+                  "props" => [
+                      "label" => "Target",
+                      "options" => $vAttributes["target"]
+                  ]
+              ],
+          ]
+        ],
+        "subtitle" => [
+            "title" => "Subtitulo",
+            "fields" => [
+                "subtitleClasses" => [
+                    "name" => "subtitleClasses",
+                    "type" => "input",
+                    "columns" => "col-12",
+                    "props" => [
+                        "label" => "Clases",
+                    ]
+                ],
+                "subtitleSize" => [
+                    "name" => "subtitleSize",
+                    "type" => "input",
+                    "props" => [
+                        "label" => "Tamaño Fuente",
+                    ]
+                ],
+                "subtitleMarginT" => [
+                    "name" => "subtitleMarginT",
+                    "type" => "select",
+                    "props" => [
+                        "label" => "Margen superior",
+                        "options" => $vAttributes["marginT"]
+                    ]
+                ],
+                "subtitleMarginB" => [
+                    "name" => "subtitleMarginB",
+                    "value" => "mb-3",
+                    "type" => "select",
+                    "props" => [
+                        "label" => "Margen inferior",
+                        "options" => $vAttributes["marginB"]
+                    ]
+                ],
+                "subtitleTransform" => [
+                    "name" => "subtitleTransform",
+                    "type" => "select",
+                    "props" => [
+                        "label" => "Transformar ",
+                        "options" => $vAttributes["textTransform"]
+                    ]
+                ],
+                "subtitleColorClass" => [
+                    "name" => "subtitleColorClass",
+                    "type" => "select",
+                    "props" => [
+                        "label" => "Color Class",
+                        "options" => $vAttributes["textColors"]
+                    ]
+                ],
+                "subtitleColor" => [
+                    "name" => "subtitleColor",
+                    "type" => "inputColor",
+                    "props" => [
+                        "label" => "Color Custom",
+                    ],
+                    "help" => [
+                        "description" => "Selecciona el color custom en Color Class para activarlo",
+                    ]
+                ],
+                "subtitleWeight" => [
+                    "name" => "subtitleWeight",
+                    "type" => "select",
+                    "props" => [
+                        "label" => "Negrita",
+                        "options" => $vAttributes["textWeight"]
+                    ]
+                ],
+                "subtitleLetterSpacing" => [
+                    "name" => "subtitleLetterSpacing",
+                    "type" => "input",
+                    "props" => [
+                        "label" => "Espacio entre letras",
+                        "type" => "number"
+                    ]
+                ],
+                "subtitleShadow" => [
+                    "name" => "subtitleShadow",
+                    "type" => "input",
+                    "props" => [
+                        "label" => "Sombra",
+                    ]
+                ],
+            ]
+        ],
+        "Animation" => [
+            "title" => "Animaciones de Entrada",
+            "fields" => [
+                "animateTextName" => [
+                    "name" => "animateTextName",
+                    "type" => "select",
+                    "props" => [
+                        "label" => "Animacion",
+                        "options" => $vAttributes["animationAOS"]
+                    ]
+                ],
+                "animateTextDuration" => [
+                    "name" => "animateTextDuration",
+                    "type" => "input",
+                    "props" => [
+                        "label" => "Duracion"
+                    ],
+                    "help" => [
+                        "description" => "Valores de 0 a 3000, con paso de 50ms"
+                    ]
+                ],
+                "animateTextOffset" => [
+                    "name" => "animateTextOffset",
+                    "type" => "input",
+                    "props" => [
+                        "label" => "Offset",
+                    ],
+                    "help" => [
+                        "description" => "Desplazamiento (en px) desde el punto de activación original"
+                    ]
+                ],
+                "animateTextDelay" => [
+                    "name" => "animateTextDelay",
+                    "type" => "input",
+                    "props" => [
+                        "label" => "Delay",
+                    ],
+                    "help" => [
+                        "description" => "Valores de 0 a 3000, con paso de 50ms"
+                    ]
+                ],
+                "animateTextEasing" => [
+                    "name" => "animateTextEasing",
+                    "type" => "select",
+                    "props" => [
+                        "label" => "Easing",
+                        "options" => $vAttributes["easingAOS"]
+                    ]
+                ],
+                "animateTextOnce" => [
+                    "name" => "animateTextOnce",
+                    "type" => "select",
+                    "props" => [
+                        "label" => "One",
+                        "options" => $vAttributes["validation"]
+                    ],
+                    "help" => [
+                        "description" => "Si la animación debe ocurrir solo una vez, mientras se desplaza hacia abajo"
+                    ]
+                ],
+                "animateTextMirror" => [
+                    "name" => "animateTextMirror",
+                    "type" => "select",
+                    "props" => [
+                        "label" => "Mirror",
+                        "options" => $vAttributes["validation"]
+                    ],
+                    "help" => [
+                        "description" => "Si los elementos deben animarse mientras se desplazan más allá de ellos"
+                    ]
+                ],
+            ]
+        ],
+    ]
+  ],
 ];

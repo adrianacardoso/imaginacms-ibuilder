@@ -24,7 +24,7 @@
         <div class="video-external-mini {{$videoExternalMiniClass}}">
 
           @if ($isInstagram)
-            <div style="max-width:350px;margin:auto">
+            <div style="max-width:326px;margin:auto">
               <blockquote class="instagram-media"
                           data-instgrm-permalink="{{ $video }}"
                           data-instgrm-version="14"></blockquote>
